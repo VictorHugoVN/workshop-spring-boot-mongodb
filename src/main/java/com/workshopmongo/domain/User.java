@@ -18,7 +18,8 @@ public class User implements Serializable{
 	private String id;
 	private String nome;
 	private String email;
-	@DBRef(lazy=true) // Atributo referenciando outra coleção do MongoDB. lazy=true -> Os posts só serão carregados se forem explicitamente acessados
+	@DBRef(lazy=true) // Atributo referenciando outra coleção do MongoDB
+	// lazy=true -> Os posts só serão carregados se forem explicitamente acessados
 	private List<Post> posts = new ArrayList<>();
 	
 	public User() {
